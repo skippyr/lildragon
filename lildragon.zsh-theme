@@ -1,6 +1,6 @@
 setopt promptsubst
 
-Get_Branch()
+function Get_Branch()
 {
     typeset -r branch=$(git branch --show-current 2>/dev/null)
     [[ ${branch} ]] && echo " %F{3}%Bgit:(%f${branch}%F{3})%b"
