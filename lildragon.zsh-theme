@@ -1,9 +1,7 @@
 setopt promptsubst
 
-function __Lildragon()
-{
-	function Get_Branch()
-	{
+function __Lildragon() {
+	function Get_Branch() {
 		typeset -r branch=$(git branch --show-current 2>/dev/null)
 		[[ ${branch} ]] && echo " %F{3}%Bgit:(%f${branch}%F{3})%b"
 	}
