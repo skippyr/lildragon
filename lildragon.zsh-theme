@@ -1,12 +1,10 @@
 setopt promptsubst
 
-function __Lildragon() {
-    function Get_Branch() {
-        typeset -r branch=$(git branch --show-current 2>/dev/null)
-        [[ ${branch} ]] && echo " %F{3}%Bgit:(%f${branch}%F{3})%b"
-    }
-
-    echo "🐉⸖ %F{2}%B%n%b%f in %F{1}%B%~$(Get_Branch)%b%f\n~%F{1}%%>%f "
+function __Lildragon__Get_Git_Branch()
+{
+    typeset -r branch=$(git branch --show-current 2>/dev/null)
+    [[ ${branch} ]] && echo " %F{3}%Bgit:(%f${branch}%F{3})%b"
 }
 
-PROMPT='$(__Lildragon)'
+PROMPT='🐉⸖ %F{2}%B%n%b%f in %F{1}%B%~$(__Lildragon__Get_Git_Branch)%b%f
+~%F{1}%%>%f '

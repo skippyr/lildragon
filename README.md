@@ -1,52 +1,57 @@
 # Lildragon
 ## About
-A simple theme for the ZSH shell that is decorated by a dragon.
+This repository contains the source code of Lildragon, a custom theme for the
+ZSH shell that is decorated by a dragon.
 
-Here is a preview that you can check out:
+Here is a preview that you can check it out:
 
 ![](preview.webp)
 
-Note: the colors used in this shell theme depends on your terminal emulator's
-      theme. This means that it may look different in your setup compared to the
-      preview.
+Please note that the colors used in the theme may look different in your setup,
+as they depend on your terminal emulator's theme. The theme used in the preview
+is [Flamerial](https://github.com/skippyr/flamerial).
 
 In the prompt, you will find:
 
 - If you have sourced a virtual environment, its base name.
 - Your user name.
 - Your current directory path.
-- If inside a Git repository, the branch name.
+- If inside a Git repository, the active branch name.
 
 ## Installation
 ### Dependencies
-In order to install and run this software properly, the following dependencies
+In order to install and this software properly, the following dependencies
 must be installed:
 
-- `git`: required to clone this repository and obtain information about your
-         Git repositories to show in the prompt.
-- [An emojis font](https://fonts.google.com/noto/specimen/Noto+Emoji):
-    required to provide the pretty symbols used in the prompt.
+- `git`: required to both clone this repository and obtain information about
+         your Git repositories to show in the prompt.
+- [A Nerd Fonts' font](https://www.nerdfonts.com/font-downloads) and [an
+  emojis font](https://fonts.google.com/noto/specimen/Noto+Emoji):
+  required to provide the pretty symbols used in the prompt.
 
 ### Procedures
 Using a command-line utility, follow these steps:
 
 - Clone this repository using `git`.
 
-```bash
-git                                                                            \
-    clone --depth 1 https://github.com/skippyr/lildragon                       \
-    ~/.local/share/zsh/themes/lildragon
-```
+  ```bash
+  git clone --depth 1 https://github.com/skippyr/lildragon                     \
+                      ~/.local/share/zsh/themes/lildragon
+  ```
 
-- Add the following source rule in your `~/.zshrc` file. Ensure to not source
-  any other theme to avoid causing conflicts.
+  The option `depth` with value `1` specifies to `git` that you only want to
+  download the latest commit instead of the whole commit that it would do by
+  default.
 
-```bash
-source ~/.local/share/zsh/themes/lildragon/lildragon.zsh-theme
-```
+- Add the following source rule to your `~/.zshrc` file. Ensure to not be
+  sourcing any other theme to avoid conflicts.
 
-- Open a new shell session. At this point, the theme should be installed and
-  running.
+  ```bash
+  source ~/.local/share/zsh/themes/lildragon/lildragon.zsh-theme
+  ```
+
+- Open a new ZSH session. At this point, the theme should be running and be
+  ready for you to use.
 
 ## Support
 Report issues, questions and suggestions through its [issues page](https://github.com/skippyr/lildragon/issues).
